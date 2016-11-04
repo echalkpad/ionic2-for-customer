@@ -17,7 +17,7 @@ export class SMSLoginPage{
     }
 
     goBack() {
-        this.router.pop();
+        this.router.popSafe();
     }
 
     smsLogin() {

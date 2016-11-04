@@ -15,7 +15,7 @@ export class AboutPage {
   }
 
   goBack() {
-    this.router.pop();
+    this.router.popSafe();
   }
 
 }

@@ -17,7 +17,7 @@ export class LoginPage{
     }
 
     goBack() {
-        this.router.pop();
+        this.router.popSafe();
     }
 
     login() {
