@@ -8,6 +8,8 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  canGoBack = this.router.canGoBack;
+
   constructor(public navCtrl: NavController,private router: Router) {
 
   }

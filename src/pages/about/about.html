@@ -1,7 +1,7 @@
 
 <ion-header class="demo-header">
-  <img src="assets/icon/ic_keyboard_arrow_left_black_24px.svg" alt="" (click)="goBack()">
-  <p>会员中心</p>
+  <img src="assets/icon/ic_keyboard_arrow_left_black_24px.svg" alt="" (click)="goBack()" *ngIf="canGoBack()">
+  <p [ngClass]="canGoBack()?'':'one'">会员中心</p>
 </ion-header>
 <ion-content>
 <div class="mypraise-style-one" style="padding-bottom: 0">
