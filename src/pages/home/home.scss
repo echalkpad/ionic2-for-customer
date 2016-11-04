@@ -2,7 +2,7 @@
   background-color: #eeeeee;
 }
 .home-title {
-  padding: 5px 20px;
+  //padding: 5px 20px;
   background-color: #ffffff;
   span {
     font-size: 15px;
@@ -12,25 +12,33 @@
   }
   img {
     vertical-align: middle;
-    float: left;
-    width:32px;
-    height: 32px;
+    padding: 10px 15px;
+    //float: left;
+    //width:32px;
+    //height: 32px;
   }
 }
 
 .home-slide {
-  height: 200px;
-  background-color: #0c60ee;
+  height: 185px;
+  //background-color: #0c60ee;
 }
 
 .home-menu {
   background-color: #ffffff;
   display: flex;
-  padding: 15px 15px;
-  justify-content: space-between;
-  span {
-    display: -webkit-box;
-    text-align: -webkit-center;
+  //padding: 15px 15px;
+  justify-content: space-around;
+  padding-top: 10px;
+  div {
+    text-align: center;
+    span {
+      display: -webkit-box;
+      text-align: -webkit-center;
+    }
+    img {
+      width: 48px;
+    }
   }
 }
 
