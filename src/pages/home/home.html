@@ -1,10 +1,10 @@
-<ion-content class="ion-content-background">
+
+<!--tab1-->
+<ion-content class="ion-content-background" *ngIf="selected_index == 0">
   <div class="home-title">
     <img src="assets/icon/logo.png" alt="">
-    <!--<span>中华人民共和国国家发展和改革委员会</span>-->
-    <!--<span>National Development and Reform Commission</span>-->
   </div>
-  <ion-slides class="home-slide">
+  <ion-slides class="home-slide" [options]="mySlideOptions">
     <ion-slide>
       <img src="assets/icon/ida.jpg" alt="">
     </ion-slide>
@@ -69,3 +69,228 @@
     </div>
   </div>
 </ion-content>
+
+<!--tab2-->
+
+<ion-header class="demo-header" *ngIf="selected_index == 1">
+  <div>
+    <!--<img src="assets/icon/back_icon.png" alt="" (click)="goBack()" *ngIf="canGoBack()">-->
+    <p class="one">政务资讯</p>
+  </div>
+</ion-header>
+
+<ion-content *ngIf="selected_index == 1" style="margin-top: 44px">
+  <ion-list class="demo-ion-list" (click)="goMyPraise()">
+    <ion-item>
+      Settings
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="goIonic2()">
+    <ion-item>
+      No Need for Login
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="logout()" *ngIf="hasUuid">
+    <ion-item>
+      Logout
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <span class="footer-item" (click)="goTab1()">
+    <img src="../../assets/icon/buttomicon_1.png" alt="">
+    <span>首页</span>
+  </span>
+  <span class="footer-item" (click)="goTab2()">
+    <img src="../../assets/icon/buttomicon_4.png" alt="">
+    <span class="two">政务资讯</span>
+  </span>
+  <span class="footer-item" (click)="goTab3()">
+    <img src="../../assets/icon/buttomicon_5.png" alt="">
+    <span>政民互动</span>
+  </span>
+  <span class="footer-item" (click)="goTab4()">
+    <img src="../../assets/icon/buttomicon_7.png" alt="">
+    <span>服务中心</span>
+  </span>
+  <span class="footer-item" (click)="goTab5()">
+    <img src="../../assets/icon/buttomicon_9.png" alt="">
+    <span>发改矩阵</span>
+  </span>
+</ion-footer>
+
+<!--tab3-->
+<ion-header class="demo-header" *ngIf="selected_index == 2">
+  <div>
+    <!--<img src="assets/icon/back_icon.png" alt="" (click)="goBack()" *ngIf="canGoBack()">-->
+    <p class="one">政民互动</p>
+  </div>
+</ion-header>
+
+<ion-content *ngIf="selected_index == 2" style="margin-top: 44px">
+  <ion-list class="demo-ion-list" (click)="goMyPraise()">
+    <ion-item>
+      Settings
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="goIonic2()">
+    <ion-item>
+      No Need for Login
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="logout()" *ngIf="hasUuid">
+    <ion-item>
+      Logout
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <span class="footer-item" (click)="goTab1()">
+    <img src="../../assets/icon/buttomicon_1.png" alt="">
+    <span>首页</span>
+  </span>
+  <span class="footer-item" (click)="goTab2()">
+    <img src="../../assets/icon/buttomicon_3.png" alt="">
+    <span>政务资讯</span>
+  </span>
+  <span class="footer-item" (click)="goTab3()">
+    <img src="../../assets/icon/buttomicon_6.png" alt="">
+    <span class="two">政民互动</span>
+  </span>
+  <span class="footer-item" (click)="goTab4()">
+    <img src="../../assets/icon/buttomicon_7.png" alt="">
+    <span>服务中心</span>
+  </span>
+  <span class="footer-item" (click)="goTab5()">
+    <img src="../../assets/icon/buttomicon_9.png" alt="">
+    <span>发改矩阵</span>
+  </span>
+</ion-footer>
+
+
+<!--tab4-->
+<ion-header class="demo-header" *ngIf="selected_index == 3">
+  <div>
+    <!--<img src="assets/icon/back_icon.png" alt="" (click)="goBack()" *ngIf="canGoBack()">-->
+    <p class="one">服务中心</p>
+  </div>
+</ion-header>
+
+<ion-content *ngIf="selected_index == 3" style="margin-top: 44px">
+  <ion-list class="demo-ion-list" (click)="goMyPraise()">
+    <ion-item>
+      Settings
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="goIonic2()">
+    <ion-item>
+      No Need for Login
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="logout()" *ngIf="hasUuid">
+    <ion-item>
+      Logout
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <span class="footer-item" (click)="goTab1()">
+    <img src="../../assets/icon/buttomicon_1.png" alt="">
+    <span>首页</span>
+  </span>
+  <span class="footer-item" (click)="goTab2()">
+    <img src="../../assets/icon/buttomicon_3.png" alt="">
+    <span>政务资讯</span>
+  </span>
+  <span class="footer-item" (click)="goTab3()">
+    <img src="../../assets/icon/buttomicon_5.png" alt="">
+    <span>政民互动</span>
+  </span>
+  <span class="footer-item" (click)="goTab4()">
+    <img src="../../assets/icon/buttomicon_8.png" alt="">
+    <span class="two">服务中心</span>
+  </span>
+  <span class="footer-item" (click)="goTab5()">
+    <img src="../../assets/icon/buttomicon_9.png" alt="">
+    <span>发改矩阵</span>
+  </span>
+</ion-footer>
+
+
+
+<!--tab5-->
+<ion-header class="demo-header" *ngIf="selected_index == 4">
+  <div>
+    <!--<img src="assets/icon/back_icon.png" alt="" (click)="goBack()" *ngIf="canGoBack()">-->
+    <p class="one">发改矩阵</p>
+  </div>
+</ion-header>
+
+<ion-content *ngIf="selected_index == 4" style="margin-top: 44px">
+  <ion-list class="demo-ion-list" (click)="goMyPraise()">
+    <ion-item>
+      Settings
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="goIonic2()">
+    <ion-item>
+      No Need for Login
+    </ion-item>
+  </ion-list>
+  <ion-list class="demo-ion-list" (click)="logout()" *ngIf="hasUuid">
+    <ion-item>
+      Logout
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <span class="footer-item" (click)="goTab1()">
+    <img src="../../assets/icon/buttomicon_1.png" alt="">
+    <span>首页</span>
+  </span>
+  <span class="footer-item" (click)="goTab2()">
+    <img src="../../assets/icon/buttomicon_3.png" alt="">
+    <span>政务资讯</span>
+  </span>
+  <span class="footer-item" (click)="goTab3()">
+    <img src="../../assets/icon/buttomicon_5.png" alt="">
+    <span>政民互动</span>
+  </span>
+  <span class="footer-item" (click)="goTab4()">
+    <img src="../../assets/icon/buttomicon_7.png" alt="">
+    <span>服务中心</span>
+  </span>
+  <span class="footer-item" (click)="goTab5()">
+    <img src="../../assets/icon/buttomicon_10.png" alt="">
+    <span class="two">发改矩阵</span>
+  </span>
+</ion-footer>
+
+<!--footer-->
+<ion-footer>
+  <span class="footer-item" (click)="goTab1()">
+    <img src="../../assets/icon/buttomicon_2.png" alt="" *ngIf="selected_index == 0">
+    <img src="../../assets/icon/buttomicon_1.png" alt="" *ngIf="selected_index !== 0">
+    <span [ngClass]="selected_index == 0?'two': ''">&nbsp;&nbsp;首页&nbsp;&nbsp;</span>
+  </span>
+  <span class="footer-item" (click)="goTab2()">
+    <img src="../../assets/icon/buttomicon_4.png" alt="" *ngIf="selected_index == 1">
+    <img src="../../assets/icon/buttomicon_3.png" alt="" *ngIf="selected_index !== 1">
+    <span [ngClass]="selected_index == 1?'two': ''">政务资讯</span>
+  </span>
+  <span class="footer-item" (click)="goTab3()">
+    <img src="../../assets/icon/buttomicon_6.png" alt="" *ngIf="selected_index == 2">
+    <img src="../../assets/icon/buttomicon_5.png" alt="" *ngIf="selected_index !== 2">
+    <span [ngClass]="selected_index == 2?'two': ''">政民互动</span>
+  </span>
+  <span class="footer-item" (click)="goTab4()">
+    <img src="../../assets/icon/buttomicon_8.png" alt="" *ngIf="selected_index == 3">
+    <img src="../../assets/icon/buttomicon_7.png" alt="" *ngIf="selected_index !== 3">
+    <span [ngClass]="selected_index == 3?'two': ''">服务中心</span>
+  </span>
+  <span class="footer-item" (click)="goTab5()">
+    <img src="../../assets/icon/buttomicon_10.png" alt="" *ngIf="selected_index == 4">
+    <img src="../../assets/icon/buttomicon_9.png" alt="" *ngIf="selected_index !== 4">
+    <span [ngClass]="selected_index == 4?'two': ''">发改矩阵</span>
+  </span>
+</ion-footer>

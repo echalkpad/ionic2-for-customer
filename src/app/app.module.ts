@@ -10,6 +10,9 @@ import {LoginPage} from '../pages/login/login';
 import {MyPraisePage} from '../pages/myPraise/myPraise';
 import {SMSLoginPage} from '../pages/smsLogin/smsLogin';
 import {PopoverPage} from '../pages/myPraise/myPraise';
+// import {Tab4Page} from '../pages/tab4/tab4';
+// import {Tab5Page} from '../pages/tab5/tab5';
+// import {Tab2Page} from '../pages/tab2/tab2';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import {PopoverPage} from '../pages/myPraise/myPraise';
     LoginPage,
     MyPraisePage,
     SMSLoginPage,
-    PopoverPage
+    PopoverPage,
+    // Tab4Page,
+    // Tab5Page,
+    // Tab2Page
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -39,7 +45,10 @@ import {PopoverPage} from '../pages/myPraise/myPraise';
     LoginPage,
     MyPraisePage,
     SMSLoginPage,
-    PopoverPage
+    PopoverPage,
+    // Tab4Page,
+    // Tab5Page,
+    // Tab2Page
   ],
   providers: []
 })

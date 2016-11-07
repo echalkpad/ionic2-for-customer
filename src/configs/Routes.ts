@@ -6,10 +6,16 @@ import {MyPraisePage} from '../pages/myPraise/myPraise';
 import {AgreementPage} from '../pages/agreement/agreement';
 import {TabsPage} from '../pages/tabs/tabs';
 import {SMSLoginPage} from '../pages/smsLogin/smsLogin';
+import {HomePage} from '../pages/home/home';
+import {AboutPage} from '../pages/about/about';
+import {ContactPage} from '../pages/contact/contact';
+// import {Tab4Page} from '../pages/tab4/tab4';
+// import {Tab5Page} from '../pages/tab5/tab5';
+// import {Tab2Page} from '../pages/tab2/tab2';
 
 export const Routes = {
     'Tabs': {
-        page: TabsPage,
+        page: HomePage,
         params: {index:1},
         options: {duration:0},
         done: null,
@@ -81,4 +87,34 @@ export const Routes = {
             force:false //true表示无论页面栈里有没有上一级页面都强制跳向配置页，默认为false
         }
     },
+  // 'Home': {
+  //   page: HomePage,
+  //   url: '/home',
+  //   title: '用户协议',
+  // },
+  'about': {
+    page: AboutPage,
+    url: '/about',
+    title: '用户协议',
+  },
+  'contact': {
+    page: ContactPage,
+    url: '/contact',
+    title: '用户协议',
+  },
+  // 'tab4': {
+  //   page: Tab4Page,
+  //   url: '/tab4',
+  //   title: '用户协议',
+  // },
+  // 'tab5': {
+  //   page: Tab5Page,
+  //   url: '/tab5',
+  //   title: '用户协议',
+  // },
+  // 'tab2': {
+  //   page: Tab2Page,
+  //   url: '/tab2',
+  //   title: '用户协议',
+  // },
 }
